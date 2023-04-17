@@ -1,0 +1,257 @@
+@import "../App.css";
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid red;
+    padding: 0 50px;
+    padding-left: 0;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    color: white;
+}
+
+nav .nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+nav .nav-wrapper .nav-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+}
+
+nav .nav-wrapper .nav-side:last-child {
+    justify-content: right;
+    gap: 20px;
+}
+
+nav .nav-wrapper .nav-side .logo {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--starling);
+    background: rgb(255,255,255);
+    background: -moz-radial-gradient(circle, rgba(255,255,255,1) 59%, rgba(255,255,255,0) 59%);
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 59%, rgba(255,255,255,0) 59%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 59%, rgba(255,255,255,0) 59%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+nav .nav-wrapper .nav-side.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+nav .nav-wrapper .nav-side .nav-dropdown-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .nav-wrapper .nav-side .nav-dropdown-button:hover {
+    filter: brightness(1.2);
+    font-weight: 600;
+}
+
+nav .nav-wrapper .nav-side .nav-dropdown-button .nav-button-text {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--white);
+    /* no wrap */
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+nav .nav-wrapper .nav-side .nav-dropdown-button .nav-dropdown-icon {
+    transition: all 0.2s ease-in-out;
+}
+
+nav .nav-wrapper .nav-side .nav-dropdown-button.active {
+    filter: brightness(1.2);
+    font-weight: 600;
+}
+
+nav .nav-wrapper .nav-side .nav-dropdown-button.active .nav-button-text {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+nav .nav-wrapper .nav-side .nav-dropdown-button.active .nav-dropdown-icon {
+    color: var(--primary);
+}
+
+nav .nav-wrapper .nav-side .nav-button.filled {
+    background-color: var(--starling);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 100;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .nav-wrapper .nav-side .nav-button.filled:hover {
+    filter: brightness(1.2);
+}
+
+nav .nav-wrapper .nav-side .nav-button.login {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 100;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+}
+
+nav .nav-wrapper .nav-side .nav-button.login .icon {
+    font-size: 2rem;
+}
+
+nav .nav-wrapper .nav-side .nav-button.login .nav-button-text {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--white);
+    /* no wrap */
+    white-space: nowrap;
+}
+
+/* dropdown */
+nav .nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--blackest);
+    border-radius: 0 0 10px 10px;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    z-index: 100;
+}
+
+nav .nav-dropdown .nav-dropdown-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(151, 143, 143, 0.101);
+    gap: 90px;
+}
+
+nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section .section-name {
+    font-size: 1.75rem;
+    font-weight: 100;
+    color: var(--white);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    padding-left: 0px;
+}
+
+nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section .links li {
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section .links li a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section .links li p {
+    font-size: 0.9rem;
+    font-weight: 100;
+    color: var(--white);
+    opacity: 0.5;
+    text-decoration: none;
+    margin: 3px 0;
+}
+
+nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section .links li:hover a {
+    color: var(--starling);
+}

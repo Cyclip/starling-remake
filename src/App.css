@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* colour scheme */
+  --background: #1c1b1f;
+  --white: #e3d3e2;
+  --grey: #a8a8a8;
+  --dark-grey: #4a4a4a;
+  --black: #1c1b1f;
+  --blackest: #0a0a0a;
+  --primary: #7b4bc3;
+  --secondary: #4bc3c3;
+  --tertiary: #c34b4b;
+  --quaternary: #3646af;
+  --starling: #6936d4;
+
+  --red: #c34b4b;
+  --green: #4bc34b;
+  --blue: #4b4bc3;
+  --yellow: #c3c34b;
+  --orange: #c34b4b;
+  --purple: #4b4bc3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--white);
+}
+
 .App {
   text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .App-logo {
@@ -14,14 +46,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
