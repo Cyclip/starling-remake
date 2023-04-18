@@ -19,6 +19,10 @@ import {
     AiOutlineDown
 } from "react-icons/ai";
 
+import {
+    RxHamburgerMenu
+} from "react-icons/rx";
+
 export default function NavBar() {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const dropdownRef = useRef(null);
@@ -159,6 +163,10 @@ export default function NavBar() {
                     <button className="nav-button login">
                         <RiBankCard2Fill className="icon"/>
                         <span className="nav-button-text">Log into <br />Online Banking</span>
+                    </button>
+
+                    <button className="nav-button hamburger login">
+                        <RxHamburgerMenu className="icon"/>
                     </button>
                 </div>
             </div>

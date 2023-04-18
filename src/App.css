@@ -9,6 +9,7 @@
   --black: #1c1b1f;
   --blackest: #0a0a0a;
   --primary: #7b4bc3;
+  --primary-dark: #6936d4;
   --secondary: #4bc3c3;
   --tertiary: #c34b4b;
   --quaternary: #3646af;
@@ -46,7 +47,6 @@ body {
 }
 
 .App-header {
-  
   min-height: 100vh;
 }
 

@@ -1,10 +1,9 @@
 @import "../App.css";
 
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid red;
     padding: 0 50px;
     padding-left: 0;
     box-sizing: border-box;
@@ -254,4 +253,35 @@ nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section .links li p {
 
 nav .nav-dropdown .nav-dropdown-wrapper .nav-dropdown-section .links li:hover a {
     color: var(--starling);
+}
+
+nav .nav-wrapper .nav-side .nav-button.hamburger {
+    display: none;
+}
+
+/* responsiveness */
+@media screen and (max-width: 1200px) {
+    nav .nav-wrapper .nav-side .nav-dropdown-button .nav-button-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    nav .nav-wrapper .nav-side .nav-dropdown-button {
+        display: none;
+    }
+
+    nav .nav-wrapper .nav-side .nav-button.hamburger {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav .nav-wrapper .nav-side .nav-button.filled {
+        display: none;
+    }
+
+    nav .nav-wrapper .nav-side .nav-button.login:not(.hamburger) {
+        display: none;
+    }
 }
