@@ -4,8 +4,22 @@ import { useState } from "react";
 import "./mainSection.css";
 
 export default function MainSection() {
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        function logit() {
+            setScrollY(window.scrollY);
+        }
+
+        window.addEventListener("scroll", logit);
+
+        return () => {
+            window.removeEventListener("scroll", logit);
+        }
+    }, []);
+
     return (
-        <div className="main-section">
+        <section className="main-section">
             <div className="main-section__content">
                 <h1 className="title">Award-winning bank accounts</h1>
                 <p className="subtitle">
@@ -35,11 +49,15 @@ export default function MainSection() {
                 </div>
             </div>
             <div className="main-section__image">
-                <img src="/fees-cards.png" alt="starling cards" />
+                <img src="/fees-cards.png" alt="starling cards"
+                    style={{
+                        transform: `translateY(${scrollY * 0.3}px)`,
+                    }}
+                />
             </div>
             <div className="main-section__bg">
                 <img src="/bg.jpg" alt="starling background" />
             </div>
-        </div>
+        </section>
     )
 }

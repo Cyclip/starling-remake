@@ -2,6 +2,7 @@ import './App.css';
 
 import NavBar from './components/NavBar';
 import MainSection from './components/MainSection';
+import QualitySection from './components/QualitySection';
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
         <NavBar />
 
         <MainSection />
+
+        <QualitySection />
       </header>
     </div>
   );
