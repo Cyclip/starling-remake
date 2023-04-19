@@ -1,0 +1,96 @@
+.disclaimer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.485);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.diclaimer__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    height: 80%;
+    max-height: 500px;
+    background-color: var(--black);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.disclaimer__paragraph {
+    font-size: 0.95rem;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.disclaimer__icon {
+    font-size: 8rem;
+    color: var(--orange);
+}
+
+.disclaimer__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.disclaimer__button {
+    width: 100%;
+    height: 40px;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    flex-grow: 1;
+}
+
+.disclaimer__button:hover {
+    background-color: var(--orange-bright);
+}
+
+.disclaimer__button.outline {
+    background-color: transparent;
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+.disclaimer__button.outline:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+/* fade in/out stuff if .visible */
+.disclaimer {
+    display: none;
+}
+
+.disclaimer.visible {
+    display: block;
+    animation: fade-in 0.2s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        display: block;
+    }
+    100% {
+        opacity: 1;
+    }
+}

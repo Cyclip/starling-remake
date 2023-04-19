@@ -140,7 +140,7 @@
     background-repeat: no-repeat;
     opacity: 0.8;
     z-index: -1;
-    animation: bg 120s linear infinite;
+    animation: bg 60s linear infinite;
 }
 
 @keyframes bg {

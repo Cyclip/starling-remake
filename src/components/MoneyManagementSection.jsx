@@ -43,7 +43,7 @@ function Card({ title, subtitle, icon }) {
     )
 }
 
-export default function MoneyManagementSection() {
+export default function MoneyManagementSection(props) {
     return (
         <section className="money-section">
             <div className="money-section__content">
@@ -59,7 +59,7 @@ export default function MoneyManagementSection() {
                 </div>
 
                 <div className="money-section__button_container">
-                    <button className="money-section__button">
+                    <button className="money-section__button" onClick={props.openDisclaimer}>
                         <SiStarlingbank />
                         Get started with Starling
                     </button>

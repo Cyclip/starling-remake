@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "./mainSection.css";
 
-export default function MainSection() {
+export default function MainSection(props) {
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
@@ -27,8 +27,8 @@ export default function MainSection() {
                 </p>
 
                 <div className="main-section__buttons">
-                    <button className="main-section__button">Open an account</button>
-                    <button className="main-section__button outline">Learn more</button>
+                    <button className="main-section__button" onClick={props.openDisclaimer}>Open an account</button>
+                    <button className="main-section__button outline" onClick={props.openDisclaimer}>Learn more</button>
                 </div>
 
                 <div className="main-section__stats">

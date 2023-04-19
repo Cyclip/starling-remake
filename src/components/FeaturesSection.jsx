@@ -60,7 +60,7 @@ function FeatureCard(props) {
     )
 }
 
-export default function FeaturesSection() {
+export default function FeaturesSection(props) {
     return (
         <section className="features-section">
             <div className="features-section__content">
@@ -92,7 +92,7 @@ export default function FeaturesSection() {
                         Streamline your finances and get total visibility over your money by switching your current account over to Starling today with the Current Account Switch Service. It’s free, easy and we’ll handle everything for you.
                         </p>
                     </div>
-                    <button className="switch-to-starling">
+                    <button className="switch-to-starling" onClick={props.openDisclaimer}>
                         <GiUpgrade />
                         Switch
                     </button>

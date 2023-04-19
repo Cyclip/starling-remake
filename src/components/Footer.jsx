@@ -12,7 +12,7 @@ const sections = [
     },
     {
         title: "Customer support",
-        links: ['Cost of living', 'APP Scams Code', 'Banking glossary', 'Coronavirus support', 'Fees, rates and charges', 'Help centre', 'Responsible Disclosure', 'Security and fraud', 'Service statusAll systems operational.', 'Supporting life events', 'Website accessibility']
+        links: ['Cost of living', 'APP Scams Code', 'Banking glossary', 'Coronavirus support', 'Fees, rates and charges', 'Help centre', 'Responsible Disclosure', 'Security and fraud', 'Service status', 'Supporting life events', 'Website accessibility']
     },
     {
         title: "Partner with us",
@@ -26,20 +26,25 @@ function FooterSection(props) {
             <h3 className="footer__section-title">{props.title}</h3>
             <ul className="footer__section-links">
                 {props.links.map((link, index) => (
-                    <li key={index} className="footer__section-link">{link}</li>
+                    <li key={index} className="footer__section-link" onClick={props.openDisclaimer}>{link}</li>
                 ))}
             </ul>
         </div>
     );
 }
 
-export default function Footer() {
+export default function Footer(props) {
     return (
         <footer>
             <div className="footer__container">
                 <div className="footer__sections">
                     {sections.map((section, index) => (
-                        <FooterSection key={index} title={section.title} links={section.links} />
+                        <FooterSection
+                            key={index}
+                            title={section.title}
+                            links={section.links}
+                            openDisclaimer={props.openDisclaimer}
+                        />
                     ))}
                 </div>
 

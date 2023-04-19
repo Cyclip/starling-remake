@@ -23,7 +23,7 @@ import {
     RxHamburgerMenu
 } from "react-icons/rx";
 
-export default function NavBar() {
+export default function NavBar(props) {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const dropdownRef = useRef(null);
 
@@ -84,7 +84,7 @@ export default function NavBar() {
                                         {
                                             section.links.map((link, index) => {
                                                 return (
-                                                    <li key={index}>
+                                                    <li key={index} onClick={props.openDisclaimer}>
                                                         <a href="#">{link.name}</a>
                                                         <p>{link.description}</p>
                                                     </li>
@@ -156,11 +156,11 @@ export default function NavBar() {
                 </div>
 
                 <div className="nav-side">
-                    <button className="nav-button filled">
+                    <button className="nav-button filled" onClick={props.openDisclaimer}>
                         <span className="nav-button-text">Apply now</span>
                     </button>
 
-                    <button className="nav-button login">
+                    <button className="nav-button login" onClick={props.openDisclaimer}>
                         <RiBankCard2Fill className="icon"/>
                         <span className="nav-button-text">Log into <br />Online Banking</span>
                     </button>
