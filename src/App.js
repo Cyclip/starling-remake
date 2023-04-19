@@ -6,6 +6,7 @@ import QualitySection from './components/QualitySection';
 import FeaturesSection from './components/FeaturesSection';
 import MoneyManagementSection from './components/MoneyManagementSection';
 import ApplicationSection from './components/ApplicationSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <FeaturesSection />
 
         <MoneyManagementSection />
+
+        <Footer />
       </header>
     </div>
   );
