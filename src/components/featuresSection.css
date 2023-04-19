@@ -1,0 +1,149 @@
+@import "../App.css";
+
+.features-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+.features-section .features-section__content {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.blue {
+    color: var(--blue);
+    /* mild light blue glow */
+    text-shadow: 0 0 10px rgba(75, 75, 195, 0.5);
+}
+
+.features-section__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: #2a282e;
+    width: 300px;
+    height: 300px;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.feature-card .feature-card__icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.feature-card .feature-card__content {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.feature-card .feature-card__content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.feature-card .feature-card__content p {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--white);
+    margin: 0;
+}
+
+.feature-card:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.features-section__switchToStarling {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: #2a282e;
+    border-radius: 10px;
+    margin: 50px 150px;
+}
+
+.features-section__switchToStarling img {
+    max-height: 100px;
+    width: auto;
+}
+
+.features-section__switchToStarling .features-section__switchToStarling__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    text-align: left;
+    flex: 40;
+}
+
+.features-section__switchToStarling .features-section__switchToStarling__content h3 {
+    margin: 0;
+    color: var(--primary);
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.features-section__switchToStarling .features-section__switchToStarling__content p {
+    margin: 0;
+    color: var(--white);
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.features-section__switchToStarling button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    flex: 5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.features-section__switchToStarling button:hover {
+    background-color: var(--primary-dark);
+}

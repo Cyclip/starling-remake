@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import MainSection from './components/MainSection';
 import QualitySection from './components/QualitySection';
+import FeaturesSection from './components/FeaturesSection';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <MainSection />
 
         <QualitySection />
+
+        <FeaturesSection />
       </header>
     </div>
   );

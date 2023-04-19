@@ -9,7 +9,10 @@ export default function QualitySection() {
             <div className="quality-section__content">
                 <h1 className="title">Someone joins Starling every 38 seconds</h1>
                 <p className="subtitle">
-                    and you could be next. Join the 2.7 million people who are already banking with us.
+                    and you could be next. Join the <span style={{
+                        color: "var(--purple)",
+                        fontWeight: "bold",
+                    }}>2.7 million people</span> who are already banking with us.
                 </p>
 
                 <div className="quality-section__images">
