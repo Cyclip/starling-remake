@@ -1,0 +1,119 @@
+@import "../App.css";
+
+.money-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 100px;
+}
+
+.money-section .money-section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 9;
+}
+
+.money-section__content .title {
+    font-size: 4rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.money-section__content .subtitle {
+    font-size: 1.3rem;
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.money-section .money-section__image {
+    flex: 7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.money-section .money-section__image img {
+    width: 120%;
+    transform: translateX(50px);
+}
+
+.money-section__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.money-section__card {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    padding: 20px 0;
+}
+
+.money-section__card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 3rem;
+    color: var(--blue);
+}
+
+.money-section__card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+    padding-top: 7px;
+}
+
+.money-section__card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.money-section__card-subtitle {
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0;
+    /* width: 120%; */
+}
+
+.money-section__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: var(--teal);
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.money-section__button:hover {
+    background-color: var(--teal);
+    color: var(--white);
+    transform: scale(1.05);
+}

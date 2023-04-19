@@ -52,6 +52,7 @@ export default function MainSection() {
                 <img src="/fees-cards.png" alt="starling cards"
                     style={{
                         transform: `translateY(${scrollY * 0.3}px)`,
+                        filter: `blur(${scrollY * 0.01}px)`
                     }}
                 />
             </div>
