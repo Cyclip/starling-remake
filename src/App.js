@@ -5,6 +5,7 @@ import MainSection from './components/MainSection';
 import QualitySection from './components/QualitySection';
 import FeaturesSection from './components/FeaturesSection';
 import MoneyManagementSection from './components/MoneyManagementSection';
+import ApplicationSection from './components/ApplicationSection';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <MainSection />
 
         <QualitySection />
+
+        <ApplicationSection />
 
         <FeaturesSection />
 

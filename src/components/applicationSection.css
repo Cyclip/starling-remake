@@ -1,0 +1,127 @@
+@import "../App.css";
+
+.app-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.app-section__title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    min-height: 100px;
+}
+
+.timeline-separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    height: 100%;
+    flex: 0;
+}
+
+.timeline-separator__circle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background-color: var(--primary);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.timeline-separator__line {
+    display: block;
+    width: 2px;
+    height: 70px;
+    background-color: var(--white);
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+.timeline-content__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.timeline-content__description {
+    font-size: 1rem;
+    font-weight: 100;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+    max-width: 400px;
+    text-align: left;
+}
+
+.timeline-item:last-child .timeline-separator__line {
+    display: none;
+}
+
+.timeline-item:last-child .timeline-separator__circle {
+    background-color: var(--teal-bright);
+}
+
+.app-section__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.app-section__image {
+    max-width: 50%;
+    height: auto;
+}
+
+.app-section__image img {
+    width: 100%;
+    height: auto;
+}
